@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tektur:wght@400..900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+}
+.logo {
+    font-family: "Tektur", sans-serif;
+}
+
+.person {
+    transition: all 0.3s;
+}
+.dropDown:hover{
+    display: flex;
+}
+.dropDown{
+    width: 101px;
+    top: -2px;
+    right: -91px;
+    transition: all 0.3s;
+    margin: 10px;
+}
+.person:hover .dropDown {
+   
+    display: flex;
+   
+}
+.hamburger{
+    display: none;
+}
+.Myprofile{
+    margin-top: 10px;
+}
+.pages ul .active::after {
+    content: '';
+    display: block;
+    background-color: black;
+    width: 100%;  /* Full width under the text */
+    height: 2px;  /* Thickness of the line */
+    margin-top: 4px; /* Space between text and line */
+    border-radius: 4px; /* Smooth edges */
+    animation: ActiveBar 0.3s ease-in-out forwards;
+}
+.ham-menu{
+    display: block;
+}
+@keyframes ActiveBar {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+
+
+    
+}
+@media screen and (max-width: 768px) {
+    .pages{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    /* .ham-menu{
+        display: block;
+    } */
+     .div-3{
+        margin: auto;
+     }
+     /* nav{
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+     } */
+     .active::after {
+      
+        background-color: white;
+       
+    }
+}

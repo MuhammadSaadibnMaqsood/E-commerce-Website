@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tektur:wght@400..900&display=swap');
+
+*{
+    font-family: "Poppins";
+    
+}
+@media screen and (max-width: 768px) {
+    .disc{
+        width: 100%;
+    }
+    
+}

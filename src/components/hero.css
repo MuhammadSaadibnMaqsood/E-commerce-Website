@@ -1,0 +1,185 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tektur:wght@400..900&display=swap');
+
+
+.line::after{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: 0px 2px 10px black;
+}
+.heroHeading{
+    font-family: 'Tektur',sans-serif;
+    font-size: 100px;
+    text-shadow: 0px 2px 10px black;
+}
+.part2 img{
+    opacity: 0;
+    animation: opacity 1s ease-in 1s forwards;
+    transition: all 0.3s;
+
+}
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.part2 img:hover{
+   transform: scale(1.1);
+  
+}
+.line1{
+   
+    margin-top: 5px;
+    animation: moveLine1 1s ease-in forwards;
+}
+@keyframes moveLine1 {
+    from{
+        transform: translate(-20px);
+
+    }
+    to{
+        transform: translate(140px);
+    }
+    
+}
+
+.line2{
+    transform: translate(250px);
+    animation: moveLine2 1s ease-in forwards;
+    margin-top: 5px;
+}
+@keyframes moveLine2 {
+    from{
+        transform: translate(450px);
+
+    }
+    to{
+        transform: translate(200px);
+
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .HeroSection{
+        display: flex;
+        flex-direction: column;
+    }
+    .part1{
+        height: 50vh;
+        width: 100%;
+        
+    }
+    .part2{
+        height: 50vh;
+        width: 100%;
+    }
+    .line::after{
+        content: '';
+        display: none;
+        width: 200px;
+        height: 3px;
+        border-radius: 10px;
+        background-color: black;
+    }
+    .heroHeading{
+        font-family: 'Tektur',sans-serif;
+        font-size: 50px;
+        text-align: center;
+    }
+    .part2 img{
+        width: 100%;
+    }
+}
+ */
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Tektur:wght@400..900&display=swap');
+
+
+
+.HeroSection {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.part1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.heroHeading {
+    font-family: 'Tektur', sans-serif;
+    font-size: 5rem;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    letter-spacing: 5px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    }
+    to {
+        text-shadow: 0 0 25px rgba(0, 255, 255, 1);
+    }
+}
+
+.line::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, cyan, magenta);
+    box-shadow: 0px 2px 10px cyan;
+}
+
+.part2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.part2 img {
+    width: 80%;
+    filter: drop-shadow(0px 0px 20px rgba(0, 255, 255, 0.8));
+    transition: transform 0.5s ease-in-out;
+}
+
+.part2 img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+@media screen and (max-width: 768px) {
+    .HeroSection {
+        flex-direction: column;
+        height: 650px;
+    }
+    
+    .heroHeading {
+        font-size: 3rem;
+    }
+    .heroSubText{
+        font-size: 15px;
+    }
+    
+    .part2 img {
+        width: 90%;
+    }
+}
